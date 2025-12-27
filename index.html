@@ -6,7 +6,7 @@ layout: default
   <div class="container">
     <h1 class="logo pull-left">
       <a href="/">
-        <span class="logo-title">{{ site.org_name }}</span>
+        <span class="logo-title">JHU Parkinson's Pals</span>
       </a>
     </h1><!--//logo-->
     <nav id="main-nav" class="main-nav navbar-right" role="navigation">
@@ -23,6 +23,7 @@ layout: default
           <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
           <li class="nav-item"><a class="scrollto" href="#about">Our Mission</a></li>
           <li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>
+          <li class="nav-item"><a class="scrollto" href="#team">About Us</a></li>
           <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
         </ul><!--//nav-->
       </div><!--//navabr-collapse-->
@@ -33,34 +34,17 @@ layout: default
 <!-- ******PROMO****** -->
 <section id="promo" class="promo section offset-header">
   <div class="container text-center">
-    <h2 class="title"><span class="highlight">{{ site.org_name }}</span></h2>
-    <p class="intro">{{ site.org_summary }}</p>
+    <div class="promo-logos">
+      <img src="/assets/logo.png" alt="JHU Parkinson's Pals Logo" />
+      <img src="/assets/Johns-Hopkins-University-Symbol.png" alt="Johns Hopkins University" />
+    </div>
+    <h2 class="title"><span class="highlight">JHU Parkinson's Pals</span></h2>
+    <p class="intro">Parkinson's come in all shapes and sizes. Over 55% have experienced loneliness and social isolation. We connect them with college students to share their stories and feel supported.</p>
     <div class="btns">
-      <!--a class="btn btn-cta-secondary" href="#" target="_blank">Demo</a-->
-      <a class="btn btn-outline btn-outline-medium scrollto" href="#about" target="_blank">Learn More <i class="fa fa-angle-double-down"></i></a>
+      <a class="btn btn-cta-secondary" href="mailto:jhuparkinsonspals@outlook.com"><i class="fa fa-envelope"></i> jhuparkinsonspals@outlook.com</a>
+      <a class="btn btn-outline btn-outline-medium scrollto" href="#about">Learn More <i class="fa fa-angle-double-down"></i></a>
     </div>
-    <ul class="meta list-inline">
-      <li></li>
-    </ul><!--//meta-->
   </div><!--//container-->
-  <div class="social-media">
-    <div class="info text-center">
-      <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-        {% endif %}
-        {% if site.org_general_email_inbox %}
-        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
 </section><!--//promo-->
 
 <!-- ******MISSION****** -->
@@ -69,12 +53,13 @@ layout: default
     <h2 class="title text-center">Our Mission</h2>
     <div class="mission-content">
       <ul class="mission-list">
-        <li><strong>Combat loneliness:</strong> We facilitate intergenerational connections between students and people with Parkinson's Disease through weekly 1-on-1 conversations. </li>
-        <li><strong>Build community:</strong> We address the psychosocial disruptions in the form of demoralization, loneliness, social isolation that often go undiagnosed and untreated throughout their treatment journey. </li>
+        <li><strong>Combat loneliness:</strong> We facilitate intergenerational connections between JHU students and people with Parkinson's Disease through weekly 1-on-1 conversations.</li>
+        <li><strong>Build community:</strong> We address the psychosocial disruptions in the form of demoralization, loneliness, social isolation that often go undiagnosed and untreated throughout their treatment journey.</li>
+        <li><strong>Nationwide outreach:</strong> We are a part of a growing network of Parkinson's Pals organizations at universities across the United States. Learn more at <a href="https://uditgarg74.wixsite.com/parkinsonspals" target="_blank" class="text-link">parkinsonspals.org</a>.</li>
       </ul>
     </div>
     <div class="mission-image text-center">
-      <img src="{{ site.baseurl }}/assets/PD Statistics.avif" alt="Parkinson's Disease Statistics" class="img-responsive center-block" />
+      <img src="/assets/PD Statistics.avif" alt="Parkinson's Disease Statistics" class="img-responsive center-block" />
     </div>
   </div><!--//container-->
 </section><!--//about-->
@@ -82,53 +67,87 @@ layout: default
 <!-- ******JOIN****** -->
 <section id="join" class="join section">
   <div class="container text-center">
-    <h2 class="title">Register</h2>
-    <p class="register-subtitle">Fill out a quick interest form for us!</p>
+    <h2 class="title">Join Us</h2>
+    <p class="register-subtitle">Interested in joining as a volunteer (JHU students only) or a Pal (someone with Parkinson's Disease)? Fill out the form below!</p>
     <div class="row register-buttons">
       <div class="col-sm-5 col-sm-offset-1">
-        <a href="{{ site.student_form_url }}" target="_blank" class="register-card">
+        <a href="https://forms.office.com/r/7hqWdU5Jmz" target="_blank" class="register-card">
           <span class="register-card-text">STUDENT <i class="fa fa-chevron-right"></i></span>
         </a>
       </div>
       <div class="col-sm-5">
-        <a href="{{ site.pal_form_url }}" target="_blank" class="register-card">
-          <span class="register-card-text">PAL <i class="fa fa-chevron-right"></i></span>
+        <a href="https://www.google.com/" target="_blank" class="register-card">
+          <span class="register-card-text">PAL (Coming Soon!)<i class="fa fa-chevron-right"></i></span>
         </a>
       </div>
     </div>
   </div><!--//container-->
 </section><!--//join-->
 
+<!-- ******TEAM****** -->
+<section id="team" class="team section">
+  <div class="container">
+    <h2 class="title text-center">About Us</h2>
+    <p class="team-intro text-center">Meet the team behind JHU Parkinson's Pals</p>
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="assets\team\mills-kelly-1083867055.jpg" alt="Team Member 2" class="img-responsive img-circle" />
+          </div>
+          <h3 class="team-name">Kelly Mills</h3>
+          <p class="team-role">Physician Advisor</p>
+          <p class="team-description">Dr. Mills is a physician and an associate professor of Neurology at Johns Hopkins University. He is the director of the Movement Disorders Division and the Neuromodulation and Advanced Therapies Clinic. </p>
+          <p class="team-contact">
+            <a href="mailto:kmills@jhmi.edu"><i class="fa fa-envelope"></i> kmills16@jhmi.edu</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="assets\team\Generic-Profile.jpg" alt="Team Member 3" class="img-responsive img-circle" />
+          </div>
+          <h3 class="team-name">Sarah Phelan</h3>
+          <p class="team-role">Clinical Coordinator</p>
+          <p class="team-description">Sarah Phelan is a health educator at the Johns Hopkins School of Medicine and is the community outreach director Sarah Phelan if the Movement Disorders Clinic. </p>
+          <p class="team-contact">
+            <a href="mailto:sphlelan@jhmi.edu"><i class="fa fa-envelope"></i> sphelan2@jhmi.edu</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="assets\team\fit_1280.png" alt="Team Member 1" class="img-responsive img-circle" />
+          </div>
+          <h3 class="team-name">Jonathan Zhang</h3>
+          <p class="team-role">Student Coordinator</p>
+          <p class="team-description">Jonathan is a junior at Johns Hopkins University studying Biomedical Engineering and Applied Math. </p>
+          <p class="team-contact">
+            <a href="mailto:jzhang234@jhu.edu"><i class="fa fa-envelope"></i> jzhan367@jhu.edu</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div><!--//container-->
+</section><!--//team-->
+
+
 <!-- ******CONTACT****** -->
 <section id="contact" class="contact section has-pattern">
   <div class="container">
     <div class="contact-inner">
-      <h2 class="title  text-center">Contact</h2>
+      <h2 class="title text-center">Contact</h2>
       <address class="text-center">
-        <strong>{{ site.org_name }}</strong><br>
-        {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{ site.org_address_suite }}<br>{% endif %}
-        {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{% endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
-        {% if site.org_phone %}
-        <abbr title="Phone">P:</abbr> {{ site.org_phone }}
-        {% endif %}
+        <strong>JHU Parkinson's Pals</strong><br>
       </address>
       <div class="clearfix"></div>
       <div class="info text-center">
         <h4 class="sub-title">Get Connected</h4>
         <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-        {% endif %}
-        {% if site.org_general_email_inbox %}
-        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-        {% endif %}
-      </ul>
+          <li class="last"><a href="mailto:jhuparkinsonspals@outlook.com"><i class="fa fa-envelope"></i></a></li>
+        </ul>
       </div><!--//info-->
     </div><!--//contact-inner-->
   </div><!--//container-->

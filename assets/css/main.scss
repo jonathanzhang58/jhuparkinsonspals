@@ -4,39 +4,22 @@
 @charset "utf-8";
 
 //
-// Set color scheme
+// Color scheme - Medical (white background, red highlights, black text)
 //
-
-{% if site.color_scheme == "one" %}
-  $color: #17baef;
-  $color-2: #eebf3f;
-{% elsif site.color_scheme == "two" %}
-  $color: #b4ca65;
-  $color-2: #dd7c4f;
-{% elsif site.color_scheme == "three" %}
-  $color: #6690b9;
-  $color-2: #f46fa3;
-{% elsif site.color_scheme == "four" %}
-  $color: #50c8c9;
-  $color-2: #ffbe57;
-{% elsif site.color_scheme == "medical" %}
-  $color: #ffffff;
-  $color-2: #C41E3A;
-{% else %}
-  $color: #6690b9;
-  $color-2: #dd9d71;
-{% endif %}
+$color: #ffffff;
+$color-2: #C41E3A;
+$medical-red: #C41E3A;
+$medical-dark: #1a1a1a;
+$medical-grey: #666;
 
 //
 // Import partials from `_sass` folder
 //
-
 @import "default";
 
 //
-// Insert custom css below this line
+// Custom styles
 //
-
 .disabled-link {
   pointer-events: none;
 }
@@ -45,7 +28,7 @@
 }
 .promo .title {
   font-size: 65px;
-  color: $color;
+  color: $medical-dark;
   margin-top: 0;
 }
 .btns {
@@ -53,105 +36,142 @@
   margin-bottom: 50px;
 }
 .promo .meta {
-    margin-top: 30px;
-}
-.donorbox {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .join-us-intro {
   margin-top: 0;
-  color: #ddd !important;
+  color: $medical-dark !important;
 }
 .highlight {
-  color: $color-2 !important;
+  color: $medical-red !important;
 }
 .promo .social-icons a {
-    display: inline-block;
-    background: darken($color, 20%);
-    color: #fff;
-    width: 48px;
-    height: 48px;
-    text-align: center;
-    padding-top: 12px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    margin-right: 8px;
-    float: left;
+  display: inline-block;
+  background: $medical-red;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  padding-top: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  float: left;
+}
+.promo .social-icons a:hover {
+  background: darken($medical-red, 10%);
 }
 .btn-outline, .btn-outline:link, .btn-outline:visited {
-    background-color: transparent;
-    border-radius: 5px;
-    &.btn-outline-primary {
-      border: 2px solid $color;
-      color: $color;
-    }
-    &.btn-outline-secondary {
-      border: 2px solid $color-2;
-      color: $color-2;
-    }
-    &.btn-outline-medium {
-      border: 2px solid darken($color, 15%);
-      color: darken($color, 15%);
-    }
+  background-color: transparent;
+  border-radius: 5px;
+  &.btn-outline-primary {
+    border: 2px solid $medical-red;
+    color: $medical-red;
+  }
+  &.btn-outline-secondary {
+    border: 2px solid $medical-red;
+    color: $medical-red;
+  }
+  &.btn-outline-medium {
+    border: 2px solid $medical-red;
+    color: $medical-red;
+  }
 }
 .btn-outline:hover {
-    color: #fff !important;
-    &.btn-outline-primary {
-      background-color: $color;
-    }
-    &.btn-outline-secondary {
-      background-color: $color-2;
-    }
-    &.btn-outline-medium {
-      background-color: darken($color, 15%);
-    }
-}
-.features .form-inline {
-  margin-top: 10px;
+  color: #fff !important;
+  &.btn-outline-primary {
+    background-color: $medical-red;
+  }
+  &.btn-outline-secondary {
+    background-color: $medical-red;
+  }
+  &.btn-outline-medium {
+    background-color: $medical-red;
+  }
 }
 
-// Register section cards
-.register-subtitle {
-  font-size: 18px;
-  margin-bottom: 40px;
+// Header
+.header {
+  background: #fff;
+  border-bottom: 3px solid $medical-red;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
 }
-.register-buttons {
-  margin-top: 30px;
+.header.navbar-fixed-top {
+  background: #fff;
+  border-bottom: 3px solid $medical-red;
 }
-.register-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $color-2;
-  border: 3px solid darken($color-2, 10%);
-  border-radius: 20px;
-  padding: 60px 40px;
-  margin: 15px 0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+.header .logo a {
+  color: $medical-dark;
 }
-.register-card:hover {
-  background: darken($color-2, 8%);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
+.header .main-nav .nav .nav-item a {
+  color: $medical-grey;
 }
-.register-card-text {
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
+.header .main-nav .nav .nav-item a:hover {
+  color: $medical-red;
+}
+.header .main-nav .nav .nav-item.active a {
+  color: $medical-dark;
   font-weight: 700;
-  letter-spacing: 2px;
 }
-.register-card-text .fa {
-  margin-left: 10px;
+.header .main-nav .nav .nav-item.active {
+  color: $medical-dark;
+}
+.header .main-nav button {
+  background: $medical-red;
+}
+.header.navbar-fixed-top .logo a {
+  color: $medical-dark;
+}
+
+// Promo section
+.promo {
+  background: #fff;
+  color: $medical-dark;
+  border-bottom: 3px solid $medical-red;
+}
+.promo-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.promo-logos img {
+  max-width: 150px;
+  max-height: 150px;
+  height: auto;
+  object-fit: contain;
+}
+.promo .title .highlight {
+  color: $medical-red;
+}
+.promo .intro {
+  color: $medical-grey;
+}
+.promo .meta {
+  color: $medical-grey;
+}
+.promo .meta a {
+  color: $medical-red;
+}
+.promo .social-media {
+  background: #ffffff;
+  border-top: 2px solid $medical-red;
+}
+
+// About/Mission section
+.about {
+  background: #eec3c3;
+}
+.about .title {
+  color: $medical-dark;
+}
+.about .item .icon-holder .fa {
+  color: $medical-red;
+}
+.about .item .content .sub-title {
+  color: $medical-dark;
 }
 
 // Mission section styling
@@ -177,8 +197,15 @@
   position: absolute;
   left: 0;
   top: 2px;
-  color: $color-2;
+  color: $medical-red;
   font-size: 18px;
+}
+.mission-list .text-link {
+  color: inherit;
+  text-decoration: underline;
+}
+.mission-list .text-link:hover {
+  color: $medical-red;
 }
 .mission-image {
   margin-top: 40px;
@@ -187,81 +214,10 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(179, 29, 29, 0.1);
 }
 
-//
-// Medical color scheme overrides (white background, red highlights, black text)
-//
-{% if site.color_scheme == "medical" %}
-$medical-red: #C41E3A;
-$medical-dark: #1a1a1a;
-$medical-grey: #666;
-
-// Header
-.header {
-  background: #fff;
-  border-bottom: 3px solid $medical-red;
-}
-.header .logo a {
-  color: $medical-dark;
-}
-.header .main-nav .nav .nav-item a {
-  color: $medical-grey;
-}
-.header .main-nav .nav .nav-item a:hover {
-  color: $medical-red;
-}
-.header .main-nav button {
-  background: $medical-red;
-}
-.header.navbar-fixed-top .logo a {
-  color: $medical-dark;
-}
-
-// Promo section
-.promo {
-  background: #fff;
-  color: $medical-dark;
-}
-.promo .title {
-  color: $medical-dark;
-}
-.promo .title .highlight {
-  color: $medical-red;
-}
-.promo .intro {
-  color: $medical-grey;
-}
-.promo .meta {
-  color: $medical-grey;
-}
-.promo .meta a {
-  color: $medical-red;
-}
-.promo .social-media {
-  background: #f5f5f5;
-  border-top: 2px solid $medical-red;
-}
-.promo .social-icons a {
-  background: $medical-red;
-}
-.promo .social-icons a:hover {
-  background: darken($medical-red, 10%);
-}
-
-// About section
-.about .title {
-  color: $medical-dark;
-}
-.about .item .icon-holder .fa {
-  color: $medical-red;
-}
-.about .item .content .sub-title {
-  color: $medical-dark;
-}
-
-// Join section
+// Join/Register section
 .join {
   background: #fff;
   color: $medical-dark;
@@ -270,9 +226,6 @@ $medical-grey: #666;
 }
 .join .title {
   color: $medical-dark;
-}
-.join-us-intro {
-  color: $medical-dark !important;
 }
 .join a {
   color: $medical-red;
@@ -286,10 +239,131 @@ $medical-grey: #666;
 .join .feature-list li .fa {
   color: $medical-red;
 }
+.register-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: $medical-grey;
+}
+.register-buttons {
+  margin-top: 30px;
+}
+.register-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $medical-red;
+  border: 3px solid darken($medical-red, 10%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 15px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.register-card:hover {
+  background: darken($medical-red, 8%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.register-card-text {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.register-card-text .fa {
+  margin-left: 10px;
+}
+
+// Team section styling
+.team {
+  padding: 80px 0 40px 0;
+  background: #eec3c3;
+  border-bottom: 3px solid $medical-red;
+}
+.team .title {
+  color: $medical-dark;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.team-intro {
+  font-size: 18px;
+  color: $medical-grey;
+  margin-bottom: 50px;
+}
+.team .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team .row > [class*="col-"] {
+  display: flex;
+}
+.team-member {
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+.team-photo {
+  margin-bottom: 20px;
+}
+.team-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid $medical-red;
+  margin: 0 auto;
+}
+.team-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: $medical-dark;
+}
+.team-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: $medical-red;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.team-description {
+  font-size: 15px;
+  color: $medical-grey;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+.team-contact {
+  margin-top: 15px;
+}
+.team-contact a {
+  color: $medical-dark;
+  text-decoration: none;
+}
+.team-contact a:hover {
+  color: $medical-red;
+  text-decoration: underline;
+}
+.team-contact .fa {
+  margin-right: 5px;
+}
 
 // Contact section
 .contact {
-  background: #f5f5f5;
+  background: #ffffff;
   color: $medical-dark;
 }
 .contact .title {
@@ -333,38 +407,8 @@ a.btn-cta-secondary:hover, .btn-cta-secondary:hover {
   background: darken($medical-red, 10%);
   border-color: darken($medical-red, 10%);
 }
-.btn-outline.btn-outline-medium {
-  border-color: $medical-red;
-  color: $medical-red;
-}
-.btn-outline.btn-outline-medium:hover {
-  background: $medical-red;
-}
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
   color: $medical-dark;
 }
-
-// Highlight class
-.highlight {
-  color: $medical-red !important;
-}
-
-// Register cards for medical theme
-.register-subtitle {
-  color: $medical-grey;
-}
-.register-card {
-  background: $medical-red;
-  border-color: darken($medical-red, 10%);
-}
-.register-card:hover {
-  background: darken($medical-red, 8%);
-}
-
-// Mission list for medical theme
-.mission-list li:before {
-  color: $medical-red;
-}
-{% endif %}
