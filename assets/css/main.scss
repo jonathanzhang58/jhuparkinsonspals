@@ -19,6 +19,9 @@
 {% elsif site.color_scheme == "four" %}
   $color: #50c8c9;
   $color-2: #ffbe57;
+{% elsif site.color_scheme == "medical" %}
+  $color: #ffffff;
+  $color-2: #C41E3A;
 {% else %}
   $color: #6690b9;
   $color-2: #dd9d71;
@@ -112,3 +115,256 @@
 .features .form-inline {
   margin-top: 10px;
 }
+
+// Register section cards
+.register-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.register-buttons {
+  margin-top: 30px;
+}
+.register-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-2;
+  border: 3px solid darken($color-2, 10%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 15px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.register-card:hover {
+  background: darken($color-2, 8%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.register-card-text {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.register-card-text .fa {
+  margin-left: 10px;
+}
+
+// Mission section styling
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+.mission-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.mission-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.mission-list li:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: $color-2;
+  font-size: 18px;
+}
+.mission-image {
+  margin-top: 40px;
+}
+.mission-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+//
+// Medical color scheme overrides (white background, red highlights, black text)
+//
+{% if site.color_scheme == "medical" %}
+$medical-red: #C41E3A;
+$medical-dark: #1a1a1a;
+$medical-grey: #666;
+
+// Header
+.header {
+  background: #fff;
+  border-bottom: 3px solid $medical-red;
+}
+.header .logo a {
+  color: $medical-dark;
+}
+.header .main-nav .nav .nav-item a {
+  color: $medical-grey;
+}
+.header .main-nav .nav .nav-item a:hover {
+  color: $medical-red;
+}
+.header .main-nav button {
+  background: $medical-red;
+}
+.header.navbar-fixed-top .logo a {
+  color: $medical-dark;
+}
+
+// Promo section
+.promo {
+  background: #fff;
+  color: $medical-dark;
+}
+.promo .title {
+  color: $medical-dark;
+}
+.promo .title .highlight {
+  color: $medical-red;
+}
+.promo .intro {
+  color: $medical-grey;
+}
+.promo .meta {
+  color: $medical-grey;
+}
+.promo .meta a {
+  color: $medical-red;
+}
+.promo .social-media {
+  background: #f5f5f5;
+  border-top: 2px solid $medical-red;
+}
+.promo .social-icons a {
+  background: $medical-red;
+}
+.promo .social-icons a:hover {
+  background: darken($medical-red, 10%);
+}
+
+// About section
+.about .title {
+  color: $medical-dark;
+}
+.about .item .icon-holder .fa {
+  color: $medical-red;
+}
+.about .item .content .sub-title {
+  color: $medical-dark;
+}
+
+// Join section
+.join {
+  background: #fff;
+  color: $medical-dark;
+  border-top: 3px solid $medical-red;
+  border-bottom: 3px solid $medical-red;
+}
+.join .title {
+  color: $medical-dark;
+}
+.join-us-intro {
+  color: $medical-dark !important;
+}
+.join a {
+  color: $medical-red;
+}
+.join a:hover {
+  color: darken($medical-red, 15%);
+}
+.join .feature-list li {
+  color: $medical-dark;
+}
+.join .feature-list li .fa {
+  color: $medical-red;
+}
+
+// Contact section
+.contact {
+  background: #f5f5f5;
+  color: $medical-dark;
+}
+.contact .title {
+  color: $medical-dark;
+}
+.contact a {
+  color: $medical-red;
+}
+.contact a:hover {
+  color: darken($medical-red, 15%);
+}
+.contact .info .sub-title {
+  color: $medical-grey;
+}
+.contact .social-icons a {
+  background: $medical-red;
+}
+.contact .social-icons a:hover {
+  background: darken($medical-red, 10%);
+}
+
+// Footer
+.footer {
+  background: $medical-dark;
+}
+
+// Buttons
+a.btn-cta-primary, .btn-cta-primary {
+  background: $medical-red;
+  border-color: $medical-red;
+}
+a.btn-cta-primary:hover, .btn-cta-primary:hover {
+  background: darken($medical-red, 10%);
+  border-color: darken($medical-red, 10%);
+}
+a.btn-cta-secondary, .btn-cta-secondary {
+  background: $medical-red;
+  border-color: $medical-red;
+}
+a.btn-cta-secondary:hover, .btn-cta-secondary:hover {
+  background: darken($medical-red, 10%);
+  border-color: darken($medical-red, 10%);
+}
+.btn-outline.btn-outline-medium {
+  border-color: $medical-red;
+  color: $medical-red;
+}
+.btn-outline.btn-outline-medium:hover {
+  background: $medical-red;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $medical-dark;
+}
+
+// Highlight class
+.highlight {
+  color: $medical-red !important;
+}
+
+// Register cards for medical theme
+.register-subtitle {
+  color: $medical-grey;
+}
+.register-card {
+  background: $medical-red;
+  border-color: darken($medical-red, 10%);
+}
+.register-card:hover {
+  background: darken($medical-red, 8%);
+}
+
+// Mission list for medical theme
+.mission-list li:before {
+  color: $medical-red;
+}
+{% endif %}
