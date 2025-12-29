@@ -10,7 +10,7 @@ $color: #ffffff;
 $color-2: #C41E3A;
 $medical-red: #C41E3A;
 $medical-dark: #1a1a1a;
-$medical-grey: #666;
+$medical-grey: #1a1a1a;
 
 //
 // Import partials from `_sass` folder
@@ -162,7 +162,9 @@ $medical-grey: #666;
 
 // About/Mission section
 .about {
-  background: #eec3c3;
+  background: #fff;
+  border-top: 3px solid $medical-red;
+  border-bottom: 3px solid $medical-red;
 }
 .about .title {
   color: $medical-dark;
@@ -207,6 +209,26 @@ $medical-grey: #666;
 .mission-list .text-link:hover {
   color: $medical-red;
 }
+
+// What We Do section
+.whatwedo {
+  padding: 80px 0;
+  background: #eec3c3;
+}
+.whatwedo .title {
+  color: $medical-dark;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.whatwedo-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.whatwedo-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: $medical-grey;
+}
 .mission-image {
   margin-top: 40px;
 }
@@ -219,10 +241,8 @@ $medical-grey: #666;
 
 // Join/Register section
 .join {
-  background: #fff;
+  background: #eec3c3;
   color: $medical-dark;
-  border-top: 3px solid $medical-red;
-  border-bottom: 3px solid $medical-red;
 }
 .join .title {
   color: $medical-dark;
@@ -280,7 +300,8 @@ $medical-grey: #666;
 // Team section styling
 .team {
   padding: 80px 0 40px 0;
-  background: #eec3c3;
+  background: #fff;
+  border-top: 3px solid $medical-red;
   border-bottom: 3px solid $medical-red;
 }
 .team .title {
@@ -363,7 +384,7 @@ $medical-grey: #666;
 
 // Contact section
 .contact {
-  background: #ffffff;
+  background: #eec3c3;
   color: $medical-dark;
 }
 .contact .title {
